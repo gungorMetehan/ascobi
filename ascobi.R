@@ -85,16 +85,7 @@ system.time(
 # GROUP GENERATION ###############
 ##################################
 # Generating 10 different groups
-groups <- rbind(data.frame(group = rep(1, sampleSize/10)),
-                data.frame(group = rep(2, sampleSize/10)),
-                data.frame(group = rep(3, sampleSize/10)),
-                data.frame(group = rep(4, sampleSize/10)),
-                data.frame(group = rep(5, sampleSize/10)),
-                data.frame(group = rep(6, sampleSize/10)),
-                data.frame(group = rep(7, sampleSize/10)),
-                data.frame(group = rep(8, sampleSize/10)),
-                data.frame(group = rep(9, sampleSize/10)),
-                data.frame(group = rep(10, sampleSize/10)))
+groups <- data.frame(group = as.numeric(rep(1:10, each = sampleSize / 10)))
 
 ##################################
 # RESPONSE PATTERN GENERATION ####
